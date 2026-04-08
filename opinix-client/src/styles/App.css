@@ -1,0 +1,106 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #F9FAFB;
+  color: #3a3a3a;
+  height: 100vh;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* make sizing predictable and let elements stretch full width */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Общее расположение приложения */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+}
+
+.main-layout {
+  display: flex;
+  flex: 1;
+}
+
+/* Контент тянется на всю высоту между хедером и футером */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+  width: 100vw;
+}
+
+/* Sidebar overlays content instead of pushing it */
+.main-content {
+  transition: none;
+}
+.main-content.shifted,
+.main-content.collapsed {
+  transform: none;
+}
+
+/* Container that centers the active page content within available area */
+.content-area {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  align-items: center;    /* vertical centering */
+  justify-content: center; /* horizontal centering */
+  padding: 24px; /* keep inner padding for readability */
+}
+
+/* Ensure page inner containers can size naturally while centered */
+.content-area > * {
+  width: 100%;
+  max-width: 1200px; /* reasonable max width on large screens */
+}

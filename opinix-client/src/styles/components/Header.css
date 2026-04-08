@@ -1,0 +1,89 @@
+.app-header-bar {
+  /* Use global theme colors to match overall app style */
+  background: #fff;
+  color: #3a3a3a;
+  padding: env(safe-area-inset-top, 10px) 16px 10px;
+  border-bottom: 1px solid #D0D0D0;
+}
+.app-header-inner {
+  max-width: none;
+  margin: 0 auto;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  height:48px;
+  position: relative;
+  padding: 0 16px;
+}
+.hamburger-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #3a3a3a;
+  padding: 0;
+  margin-right: 10px;
+}
+.app-title {
+  position: static;
+  margin-left: 4px;
+  font-weight: 700;
+  font-size: 24px; /* 20% larger than 20px */
+  letter-spacing: 0.3px;
+  color: #3a3a3a; /* slightly brighter than footer gray */
+}
+
+.app-title {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.auth-section {
+  display: flex;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-info span {
+  font-size: 14px;
+}
+
+.logout-btn {
+  background: #EF4444;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.logout-btn:hover {
+  background: #cc0000;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.auth-link {
+  color: #3a3a3a;
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid #3a3a3a;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.auth-link:hover {
+  background-color: #3a3a3a;
+  color: white;
+}

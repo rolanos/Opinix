@@ -1,0 +1,39 @@
+services:
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: statista
+    volumes:
+      - db_data:/var/lib/postgresql
+    ports:
+      - 5432:5432
+
+  opinix:
+    image: ${DOCKER_REGISTRY-}opinix
+    env_file: 
+      - .env
+    build:
+      context: .
+      dockerfile: Statista.Api/Dockerfile
+
+  client:
+    image: client
+    mem_limit: 4g
+    build:
+      context: ../
+      dockerfile: opinix-client/Dockerfile
+
+  proxy:
+    image: nginx:mainline
+    depends_on:
+      - opinix
+      - client
+    
+volumes:
+  db_data:
+
+networks:
+  default:
+    name: opinix-net

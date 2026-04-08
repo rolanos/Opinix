@@ -1,0 +1,35 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coming-soon-container {
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.coming-soon-image {
+  width: 200px;
+  max-width: 80%;
+  margin-bottom: 30px;
+}
+
+.coming-soon-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.coming-soon-text {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.5;
+}

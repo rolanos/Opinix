@@ -1,0 +1,104 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #F9FAFB;
+  height: 100vh;
+  /* чтобы занять весь экран */
+  overflow: hidden;
+  /* без скролла */
+  display: flex;
+  flex-direction: column;
+}
+
+/* ======== Шапка ======== */
+.login-header {
+  background: #ffffff;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Родительский контейнер – именно он центрирует */
+.login-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;   /* центр по горизонтали */
+  align-items: flex-start;   /* выравниваем к верхней границе */
+  padding-top: 80px;         /* нужное расстояние сверху */
+  background: #F9FAFB;
+}
+
+/* Сама карточка – только визуальное оформление */
+.login-card {
+  background: #ffffff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 50px 40px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+
+/* Заголовок */
+.login-title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  color: #000;
+}
+
+/* ======== Поля и кнопка одинаковой ширины ======== */
+.login-field {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 22px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.login-field:focus {
+  border-color: #000;
+  box-shadow: 0 0 0 2px #00000020;
+  outline: none;
+}
+
+.login-button {
+  width: 100%;
+  /* одинаковая ширина с полями */
+  padding: 16px 0;
+  background: #000;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.15s, background 0.2s;
+}
+
+.login-button:hover {
+  background: #111;
+  transform: scale(1.02);
+}
+
+/* Анимация */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
